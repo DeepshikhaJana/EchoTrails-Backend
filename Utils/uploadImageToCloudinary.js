@@ -12,7 +12,7 @@ const uploadImageCloudinary = async (image) => {
     
 
     const uploadImage = await new Promise ((resolve, reject) => {
-        cloudinary.uploader.upload_stream({folder : 'Feather'}, (error, uploadResult) => {
+        cloudinary.uploader.upload_stream({folder : 'EchoTrails'}, (error, uploadResult) => {
             return resolve(uploadResult)       
         }).end(buffer)
     })
