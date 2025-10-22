@@ -9,6 +9,7 @@ load_dotenv()
 # Fetch API key
 GOOGLE_API_KEY = os.getenv("GEMINI_API")
 genai.configure(api_key=GOOGLE_API_KEY)
+GOOGLE_MAP_API = os.getenv("GOOGLE_MAP_API")
 
 
 # Initialize the Gemini Pro model
@@ -117,7 +118,7 @@ def generate_travel_itinerary(region, days, themes, budget, accommodation, speci
     # Display a map centered on the region
     st.markdown(f"""
     <iframe width="100%" height="450" style="border:0" loading="lazy" allowfullscreen
-    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAqN4eP6N5B2eQRTZnNEJJfj4jPobfI9Tg&q={main_region},India&zoom=7">
+    src="https://www.google.com/maps/embed/v1/place?key={GOOGLE_MAP_API}&q={main_region},India&zoom=7">
     </iframe>
     """, unsafe_allow_html=True)
     
