@@ -8,7 +8,7 @@ import cookieParser from 'cookie-parser'
 import morgan from 'morgan'
 import helmet from 'helmet'
 import connectDB from './Config/connectDB.js'
-//import userRouter from './Routes/user.route.js'
+import userRouter from './Routes/userRoute.js'
 
 const app = express()
 
@@ -28,9 +28,9 @@ app.use(helmet(
     }
 ))
 
-const PORT = 8080 || process.env.PORT
+const PORT = 8000 || process.env.PORT
 
-
+app.use('/api/user', userRouter)
 app.get('/', (req, res) => {
     res.send({
         message: "server is running"
