@@ -1,9 +1,10 @@
 import mongoose from "mongoose";
 const userSchema = new mongoose.Schema({
-  user_id: {
+  username: {
     type: String,
     required: true,
     unique: true,
+    trim: true,
   },
   name: {
     type: String,
@@ -31,6 +32,9 @@ const userSchema = new mongoose.Schema({
   profile_pic: {
     type: String,
     default: "",
+  },
+  bg_cover: {
+    type: String,
   },
   bio: {
     type: String,
