@@ -13,7 +13,7 @@ GOOGLE_MAP_API = os.getenv("GOOGLE_MAP_API")
 
 
 # Initialize the Gemini Pro model
-model = genai.GenerativeModel('gemini-2.0-flash')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 # Set page configuration
 st.set_page_config(
