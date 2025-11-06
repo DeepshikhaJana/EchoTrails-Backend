@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import User from "../Models/user.model.js";
+import User from "../Models/userModel.js";
 import  generateAccessToken  from "../Utils/generateAccessToken.js"
 import generateRefreshToken  from "../Utils/generateRefreshToken.js";
 
